@@ -1,0 +1,190 @@
+/* Footer & Cols */
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: var(--black-color);
+  color: var(--white-color);
+  border-top-left-radius: 5em;
+  padding: 1.5em 0 0.8em;
+  line-height: 1.7;
+  bottom: 0;
+  margin-top: 5.312rem;
+}
+
+.footer .container-fw {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+.footer h4 {
+  font-size: 1rem;
+}
+.footer-logo {
+  margin-bottom: 1em;
+  font-size: 1.7rem;
+}
+.footer-logo span {
+  color: var(--blue-color);
+  font-size: 1.7rem;
+}
+.col {
+  flex-basis: 20%;
+  padding: 1.875rem;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 20%;
+}
+.col h3 {
+  width: fit-content;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.col a {
+  color: var(--white-color);
+}
+
+/* Form Newsletter & Button */
+
+.footer form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  padding-top: 1.3em;
+  border-bottom: 1px var(--white-color) solid;
+}
+
+form input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  margin-left: 0.5em;
+  color: var(--white-color);
+}
+
+form ::placeholder {
+  color: var(--white-color);
+}
+
+form button {
+  background: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+form button .fas {
+  color: var(--white-color);
+}
+
+.footer-socials .fa-brands {
+  font-size: 1.2rem;
+  padding: 0.3em;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+.col a:hover {
+  color: var(--blue-color);
+  transition: 0.3s;
+}
+
+.footer-socials .fa-brands:hover {
+  color: var(--blue-color);
+  transition: 0.3s;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.copyright {
+  flex-basis: 50%;
+}
+
+.privacy {
+  display: flex;
+  gap: 1rem;
+  flex-basis: 25%;
+}
+
+.privacy a {
+  color: var(--white-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Media - Quaries */
+/* Tablets screens */
+@media screen and (max-width: 1024px) {
+  .footer .container-fw {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+  }
+
+  .col {
+    padding: 1.5rem;
+  }
+
+  .footer-socials .fa-brands {
+    font-size: 1.3rem;
+    margin-top: 1em;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 768px) {
+  .footer .container-fw {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 95%;
+    margin: auto;
+  }
+
+  .col {
+    padding: 1.5rem;
+  }
+
+  .footer-socials .fa-brands {
+    font-size: 1.3rem;
+    margin-top: 1em;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

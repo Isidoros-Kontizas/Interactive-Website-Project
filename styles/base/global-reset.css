@@ -1,0 +1,74 @@
+/* Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variables - Colors */
+:root {
+  --black-color: #202020;
+  --black-color-lighten: #414040;
+  --grey-color: #8d8c8c;
+  --grey-color-lighten: #b3b3b3;
+  --background-color: #ececec;
+  --background-color-two: #f0f0f0;
+  --white-color: #fff;
+  --blue-color: #2269d3;
+  --blue-color-lighten: #4891ff;
+  --light-blue: #91bdff;
+  --aqua-color: #b6d3ff;
+  --blue-white-color: #edf4ff;
+  --beige-color: #efede6;
+  --red-color: #c62828;
+}
+/* Body & Properties */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--background-color);
+}
+/* Heading fluid */
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+}
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-weight: 700;
+}
+h4 {
+  font-size: clamp(1rem, 3vw, 1.55rem);
+  font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

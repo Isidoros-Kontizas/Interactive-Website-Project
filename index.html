@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoyageVibes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/logos/fovivon.png "
+      type="image/x-icon"
+    />
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="./styles/components/skiplink.css" />
+    <link rel="stylesheet" href="./styles/components/svg.css" />
+    <link rel="stylesheet" href="./styles/components/scroll-top-button.css" />
+    <link rel="stylesheet" href="./styles/components/hero-nav.css" />
+    <link rel="stylesheet" href="./styles/components/buttons.css" />
+    <link rel="stylesheet" href="./styles/base/global-reset.css" />
+    <link rel="stylesheet" href="./styles/pages/homepage.css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" />
+    <link rel="stylesheet" href="./styles/components/burgermenu.css" />
+    <link rel="stylesheet" href="./styles/components/homepage-slider.css" />
+    <!-- Scripts Link -->
+    <script src="./scripts/animations/gsap-scrolltrigger.js" defer></script>
+    <script src="./scripts/components/burgermenu.js" defer></script>
+    <script src="./scripts/components/slider.js" defer></script>
+    <script src="./scripts/components/event-timer.js" defer></script>
+    <script src="./scripts/components/scroll-top-button.js" defer></script>
+    <!-- Scripts GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Skip Links to Main & Footer content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer-content" class="skip-link">Skip to footer content</a>
+    <!-- Header-Section -->
+    <!-- Hero - Navbar -->
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo-wrap">
+          <a
+            href="./index.html"
+            class="logo-link"
+            aria-label="Go to VoyageVibes Home"
+          >
+            <div class="logo-svg">
+              <svg
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="0 0 512 512"
+                aria-labelledby="logo-title"
+                role="img"
+              >
+                <title id="logo-title">VoyageVibes Logo</title>
+                <defs>
+                  <style>
+                    .st0 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <path
+                  id="Line_2"
+                  d="M256,280.9c-4.4,0-8,4.2-8,9.3v37.3c0,5.2,3.6,9.3,8,9.3s8-4.2,8-9.3v-37.3c0-5.2-3.6-9.3-8-9.3Z"
+                />
+                <path
+                  id="Line_1"
+                  d="M297.2,328.9c0-4.4-3.7-8-8.2-8h-32.8c-4.5,0-8.2,3.6-8.2,8s3.7,8,8.2,8h32.8c4.5,0,8.2-3.6,8.2-8Z"
+                />
+                <path
+                  id="Cloud_3"
+                  d="M486.7,101c-4.1-16-17.7-27.8-34.1-29.7-10.9-31.3-45.1-47.8-76.4-36.9-11.3,3.9-21.2,11.2-28.4,20.8-1.3-.1-2.6-.2-3.9-.2-26.5,0-48,21.5-48,48,0,26.5,21.5,48,48,48h104c22.1,0,40-17.9,40-40.1,0-3.4-.4-6.7-1.3-9.9ZM448,135h-104c-17.7,0-32-14.3-32-32,0-17.7,14.3-32,32-32,2.1,0,4.1.2,6.2.6,3.3.6,6.6-.8,8.4-3.7,12.7-20.7,39.8-27.2,60.5-14.4,10,6.1,17.1,16,19.8,27.3.9,3.7,4.3,6.3,8.1,6.2.3,0,.7,0,1,0,10.9,0,20.5,7.4,23.2,18,.5,2,.8,4,.8,6,0,13.2-10.8,24-24,24Z"
+                />
+                <path
+                  id="Cloud_2"
+                  d="M144.1,428.7c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM117.6,452H46.2c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <path
+                  id="Cloud_1"
+                  d="M495.2,335.8c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM468.6,359.1h-71.4c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <g id="Clock">
+                  <path
+                    d="M256,248c-39.8,0-72,32.2-72,72s32.2,72,72,72,72-32.2,72-72c0-39.7-32.3-72-72-72ZM256,376c-30.9,0-56-25.1-56-56s25.1-56,56-56,56,25.1,56,56c0,30.9-25.1,56-56,56Z"
+                  />
+                  <path
+                    d="M256,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M224,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M288,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <g>
+                    <rect class="st0" x="184" y="208" width="144" height="16" />
+                    <rect class="st0" x="240" y="128" width="32" height="16" />
+                    <polygon
+                      class="st0"
+                      points="275.2 160 236.8 160 210.1 192 301.9 192 275.2 160"
+                    />
+                    <polygon
+                      class="st0"
+                      points="256.8 48 255.2 48 248.8 112 263.2 112 256.8 48"
+                    />
+                    <rect class="st0" x="192" y="416" width="128" height="8" />
+                    <rect
+                      class="st0"
+                      x="176"
+                      y="240"
+                      width="160"
+                      height="160"
+                    />
+                    <path
+                      d="M344,224v-40c0-4.4-3.6-8-8-8s-8,3.6-8,8v8h-5.2l-34.8-41.7v-30.3c0-4.4-3.6-8-8-8h-.8l-7.3-72.8c-.4-4.1-3.9-7.2-8-7.2v-16c0-4.4-3.6-8-8-8s-8,3.6-8,8v16c-4.1,0-7.5,3.1-8,7.2l-7.3,72.8h-.8c-4.4,0-8,3.6-8,8v30.3l-34.8,41.7h-5.2v-8c0-4.4-3.6-8-8-8s-8,3.6-8,8v40c-4.4,0-8,3.6-8,8v176c0,4.4,3.6,8,8,8h8v80c0,4.4,3.6,8,8,8s8-3.6,8-8v-56h128v56c0,4.4,3.6,8,8,8s8-3.6,8-8v-80h8c4.4,0,8-3.6,8-8v-176c0-4.4-3.6-8-8-8ZM255.2,48h1.5l6.4,64h-14.3l6.4-64ZM240,128h32v16h-32v-16ZM236.8,160h38.5l26.7,32h-91.8l26.7-32ZM184,208h144v16h-144v-16ZM320,424h-128v-8h128v8ZM336,400h-160v-160h160v160Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="logo">Voyage<span>Vibes </span></div>
+          </a>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="menu-wrap">
+          <input
+            type="checkbox"
+            id="menu-toggler"
+            class="toggler"
+            aria-controls="menu"
+          />
+          <label
+            for="menu-toggler"
+            class="hamburger"
+            aria-label="Toggle navigation menu"
+          >
+            <div></div>
+          </label>
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./history.html">History</a></li>
+              <li><a href="./sightseeings.html">Sightseeings</a></li>
+              <li><a href="./events.html">Events</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Regular Navigation -->
+        <ul class="desktop-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./history.html">History</a></li>
+          <li><a href="./sightseeings.html">Sightseeings</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="overlay">
+        <div class="hero-content">
+          <h1 class="hero-heading">The Best of London</h1>
+          <p class="hero-text">
+            “Explore London’s wonders with our travel guide, whether you’re new
+            or seasoned—uncover hidden gems, navigate easily, and create lasting
+            memories.”
+          </p>
+          <!-- Hero - Buttons -->
+          <div class="hero-buttons">
+            <a href="./booking.html" class="btn btn-secondary"
+              >Book Your Trip Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main-Section -->
+    <main id="main-content">
+      <!-- Showcase - Card - Section -->
+      <div class="showcase fade-in">
+        <div class="showcase-heading">
+          <div><h2>Top City Breaks</h2></div>
+        </div>
+        <div class="wrapper">
+          <div class="card">
+            <img
+              src="./images/homepage-cards/barcelona.jpg"
+              alt="View details about Barcelona"
+            />
+            <div class="info">
+              <h3>Barcelona, Paris</h3>
+              <p>
+                A city of art, architecture, and coastal charm. Barcelona
+                captivates with its Gaudí masterpieces, golden beaches, and
+                dynamic culture. Whether strolling down La Rambla or admiring
+                Sagrada Familia, every moment is unforgettable.
+              </p>
+              <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/homepage-cards/rome2.jpg"
+              alt="View details about Rome"
+            />
+            <div class="info">
+              <h3>Rome, Italy</h3>
+              <p>
+                Step into the heart of ancient history and timeless beauty.
+                Rome, the Eternal City, is a stunning blend of grand
+                architecture, rich culture, and mouthwatering cuisine. From the
+                Colosseum to the Vatican, every corner tells a story.
+              </p>
+              <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/homepage-cards/amsterdam.jpg"
+              alt="View details about Amsterdam"
+            />
+            <div class="info">
+              <h3>Amsterdam, Netherlands</h3>
+              <p>
+                A city of canals, culture, and creativity. Amsterdam’s charming
+                streets, historic landmarks, and vibrant atmosphere make it a
+                must-visit destination. Ride a bike, explore world-famous
+                museums, and soak in its unique charm.
+              </p>
+              <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/homepage-cards/madrid.jpg"
+              alt="View details about Madrid"
+            />
+            <div class="info">
+              <h3>Madrid, Spain</h3>
+              <p>
+                Vibrant and full of life, Madrid is a city that never sleeps.
+                Experience world-class art at the Prado, indulge in delicious
+                tapas, and feel the energy of Spain’s capital as you explore its
+                historic streets and lively plazas.
+              </p>
+              <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight">
+        <a href="./sightseeings.html" class="btn btn-primary"
+          >See all sightseeings</a
+        >
+      </div>
+      <!-- Section - Row -->
+      <section class="row fade-in">
+        <div class="about-container">
+          <div class="about-images">
+            <div class="about-image-1"></div>
+            <div class="about-image-2"></div>
+          </div>
+          <div class="about-text">
+            <h2>About History</h2>
+            <p>
+              As the 21st century began, London embraced bold new landmarks to
+              mark the new millennium. The Millennium Dome at Greenwich sparked
+              debate, but other projects became instant icons. The London Eye,
+              originally a temporary installation, quickly became a beloved
+              fixture, offering breathtaking views to over four million visitors
+              annually. Meanwhile, the British Museum’s Great Court received a
+              stunning glass roof, transforming it into a grand, light-filled
+              space. Thanks to these ambitious projects, London seamlessly
+              blends its rich history with modern innovation.
+            </p>
+            <div>
+              <a href="./history.html" class="btn btn-primary"
+                >See all history</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Carousel Container -->
+      <div class="carousel">
+        <!-- Left Button -->
+        <button
+          class="carousel__button carousel__button--left"
+          aria-label="Previous slide"
+        >
+          <img src="./images/slider/chevron-left-solid.svg" alt="left-arrow" />
+        </button>
+        <!-- Carousel Container with Slides -->
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            <li class="carousel__slide current-slide">
+              <img
+                class="carousel__image"
+                src="./images/slider/slider1.jpg"
+                alt=""
+              />
+            </li>
+            <li class="carousel__slide">
+              <img
+                class="carousel__image"
+                src="./images/slider/slider2.jpg"
+                alt=""
+              />
+            </li>
+            <li class="carousel__slide">
+              <img
+                class="carousel__image"
+                src="./images/slider/slider3.jpg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+        <!-- Right-Button -->
+        <button
+          class="carousel__button carousel__button--right"
+          aria-label="Next slide"
+        >
+          <img
+            src="./images/slider/chevron-right-solid.svg"
+            alt="right-arrow"
+          />
+        </button>
+        <!-- Carousel Thumbnails -->
+        <div class="carousel__nav">
+          <button
+            class="carousel__indicator current-slide"
+            aria-label="Slide 1"
+          >
+            <img
+              class="carousel__image"
+              src="./images/slider/slider1.jpg"
+              alt=""
+            />
+          </button>
+          <button class="carousel__indicator" aria-label="Slide 2">
+            <img
+              class="carousel__image"
+              src="./images/slider/slider2.jpg"
+              alt=""
+            />
+          </button>
+          <button class="carousel__indicator" aria-label="Slide 3">
+            <img
+              class="carousel__image"
+              src="./images/slider/slider3.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+        <!-- Play & Pause Buttons -->
+        <div class="carousel__controls">
+          <button class="carousel__button carousel__button--toggle">
+            <img src="./images/slider/pause-solid.svg" alt="Pause" />
+          </button>
+        </div>
+      </div>
+      <!-- Section Useful-info Cards -->
+      <section class="useful-info fade-in">
+        <div class="container">
+          <h2>Useful Information</h2>
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/bed-solid.svg"
+                  alt="Where to Stay"
+                />
+              </div>
+              <h3>Where to Stay</h3>
+            </div>
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/train-subway-solid.svg"
+                  alt="Transport"
+                />
+              </div>
+              <h3>Transport</h3>
+            </div>
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/bicycle-solid.svg"
+                  alt="Sustainability"
+                />
+              </div>
+              <h3>Sustainability</h3>
+            </div>
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/plane-solid.svg"
+                  alt="Traveling to London"
+                />
+              </div>
+              <h3>Traveling to London</h3>
+            </div>
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/credit-card-solid.svg"
+                  alt="Credit Card"
+                />
+              </div>
+              <h3>Credit Card</h3>
+            </div>
+            <div class="info-card">
+              <div class="icon">
+                <img
+                  src="./images/homepage-cards/wheelchair-solid.svg"
+                  alt="Accesible London"
+                />
+              </div>
+              <h3>Accesible London</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Event-Section -->
+      <section id="coming-soon">
+        <div class="container fade-in">
+          <div class="event-image">
+            <img
+              src="./images/homepage-section/home-event.jpg"
+              alt="Event Image"
+            />
+          </div>
+          <h2>Exciting Event Coming Soon!</h2>
+          <p>Stay tuned for more details about our upcoming event.</p>
+          <div class="countdown" role="timer" aria-live="polite">
+            <div class="time"><span id="days">10</span><span>Days</span></div>
+            <div class="time"><span id="hours">15</span><span>Hours</span></div>
+            <div class="time">
+              <span id="minutes">30</span><span>Minutes</span>
+            </div>
+            <div class="time">
+              <span id="seconds">45</span><span>Seconds</span>
+            </div>
+          </div>
+          <div class="sign-up">
+            <p>
+              Be the first to know when the event is live. Sign up for updates.
+            </p>
+          </div>
+          <!-- Social Share -->
+          <div class="cta-event">
+            <span>London events by neighborhood:</span>
+            <a href="events.html" class="btn btn-primary">See all events</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-Section -->
+    <footer class="footer" id="footer-content">
+      <div class="container-fw">
+        <div class="col">
+          <h2 class="footer-logo">Voyage<span>Vibes</span></h2>
+          <p>
+            VoyageVibes brings expert travel tips to help you explore the
+            world’s best spots. Start your adventure now!
+          </p>
+        </div>
+        <div class="col">
+          <h3>Contact</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> 26985 Brighton Lane, Lake
+            Forest, CA 92630
+          </p>
+          <h4><i class="fa-solid fa-phone"></i> +1 (949) 354-2574</h4>
+          <p><i class="fa-regular fa-envelope"></i> support@voyagevibes.com</p>
+        </div>
+        <div class="col">
+          <ul>
+            <h3>Quick Links</h3>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./sightseeings.html">Sightseeing</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Newsletter</h3>
+          <form>
+            <i class="fa-regular fa-envelope"></i>
+            <label for="newsletter-email" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              placeholder="Enter your email here"
+              required
+            />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="footer-socials">
+            <a href="http://facebook.com" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="http://instagram.com" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="http://twitter.com" aria-label="Twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="http://youtube.com" aria-label="Youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>Copyright © 2025 VoyageVibes. All rights reserved.</p>
+        </div>
+        <div class="privacy">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Services</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer-Section End -->
+    <!-- Scroll-Button -->
+    <button id="scroll_button" class="scroll-button" aria-label="Scroll to top">
+      &uarr;
+    </button>
+  </body>
+</html>

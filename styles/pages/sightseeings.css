@@ -1,0 +1,392 @@
+/* Hero - Mask Background */
+.hero::before {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("../../images/hero/sightseeing-hero.jpg") no-repeat center center /
+      cover;
+  background-attachment: fixed;
+}
+
+/* Filter-Menu */
+.filter-section {
+  position: absolute;
+  left: 0%;
+  top: 75%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1;
+}
+
+.filter-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Filter Menu Styling */
+.filter-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.25rem;
+}
+.filter-menu:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* List Styling */
+.filter-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-menu li {
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Link Styling */
+.filter-menu a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.filter-menu ul li a::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.filter-menu ul li a:hover::after {
+  width: 100%;
+}
+/* Sightseeing-group */
+.sightseeing-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.sightseeing-heading {
+  margin-bottom: 1rem;
+  color: var(--black-color);
+}
+
+.sightseeing-paragraph {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--black-color-ligten);
+}
+
+/* Card and Image */
+.sightseeing-group {
+  display: none;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.sightseeing-group.active {
+  display: flex;
+}
+
+.card {
+  position: relative;
+  width: 70%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  transition: box-shadow 0.3s ease;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%,
+    rgba(0, 0, 0, 0) 0%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: var(--white-color);
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 90%;
+}
+
+.card-text h1 {
+  margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  animation: pulseEffect 0.8s ease 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover .card-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* FAQ Section*/
+.faq {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0.625rem;
+}
+
+.faq h2 {
+  margin-bottom: 2rem;
+  color: var(--black-color);
+}
+
+.faq-search {
+  margin-bottom: 2rem;
+  background-color: var(--white-color);
+}
+
+.faq-search input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  border: 2px solid var(--black-color);
+  transition: border-color 0.3s ease;
+}
+
+.faq-search input:focus {
+  border-color: var(--black-color);
+  outline: none;
+  color: var(--black-color);
+  font-size: 1rem;
+}
+.faq-search input {
+  background: transparent;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.faq-search ::placeholder {
+  color: var(--black-color);
+  font-weight: 600;
+}
+.faq-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--white-color);
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.faq-icon {
+  color: var(--black-color);
+}
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq-icon {
+  margin-right: 0.625rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-item h3::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--black-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.faq-item h3:hover::after {
+  width: 100%;
+}
+
+.faq-answer {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--black-color);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, padding-top 0.2s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-top: 1rem;
+}
+/* FAQ Footer */
+.faq-footer {
+  margin-bottom: 2rem 0;
+  font-weight: 600;
+}
+
+.faq-footer p {
+  color: var(--black-color);
+}
+.faq-footer .btn {
+  margin-top: 0.5rem;
+}
+
+/* Media Quaries */
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .filter-section {
+    top: 80%;
+  }
+
+  .filter-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.625rem;
+  }
+
+  .filter-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .filter-menu li {
+    padding: 0.5rem 1rem;
+  }
+
+  .filter-menu a {
+    font-size: 1rem;
+  }
+  .sightseeing-heading {
+    font-size: 1.5rem;
+  }
+
+  .sightseeing-paragraph {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .card {
+    width: 90%;
+    min-height: 350px;
+  }
+  .card-text {
+    max-width: 80%;
+  }
+}
+/* Mobile screens */
+@media (max-width: 768px) {
+  .filter-menu ul {
+    flex-direction: column;
+
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .filter-menu li {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .filter-menu a {
+    font-size: 1rem;
+  }
+  .sightseeing-intro {
+    margin: 1rem 0;
+  }
+
+  .sightseeing-paragraph {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .card-text {
+    bottom: 50px;
+    right: 10px;
+    max-width: 80%;
+  }
+}

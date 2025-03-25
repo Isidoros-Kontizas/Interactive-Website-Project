@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "name": "Sarah M.",
+      "location": "USA",
+      "imageUrl": "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHRlc3RpbW9uaWFsJTIwdHJhdmVsfGVufDB8fDB8fHww",
+      "quote": "Exploring London was amazing! I loved the recommendations I received, and every part of my trip was seamless. Highly recommend this site!",
+      "rating": "5"
+    },
+    {
+      "name": "John T.",
+      "location": "Canada",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1661506207357-77c4750d3c8e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTY1fHx0ZXN0aW1vbmlhbCUyMHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "quote": "London is a city full of history, and this guide helped me experience the best of it. The easy-to-follow directions and suggestions were priceless!",
+      "rating": "4"
+    },
+    {
+      "name": "Emily R.",
+      "location": "UK",
+      "imageUrl": "https://images.unsplash.com/photo-1500301111609-42f1aa6df72a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHRlc3RpbW9uaWFsJTIwdHJhdmVsfGVufDB8fDB8fHww",
+      "quote": "I had the best time in London, from the British Museum to the Tower of London. This site was essential for planning the perfect trip!",
+      "rating": "3"
+    },
+    {
+      "name": "David L.",
+      "location": "Australia",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1661425611469-3a1f8acd6058?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHRlc3RpbW9uaWFsJTIwdHJhdmVsfGVufDB8fDB8fHww",
+      "quote": "London was breathtaking, and the recommendations were spot on. This travel guide really made my trip special!",
+      "rating": "2"
+    }
+  ]
+}

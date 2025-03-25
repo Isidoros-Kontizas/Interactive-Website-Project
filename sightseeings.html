@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sightseeings - VoyageVibes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/logos/fovivon.png"
+      type="image/x-icon"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/components/skiplink.css" />
+    <link rel="stylesheet" href="./styles/components/svg.css" />
+    <link rel="stylesheet" href="./styles/components/scroll-top-button.css" />
+    <link rel="stylesheet" href="./styles/components/hero-nav.css" />
+    <link rel="stylesheet" href="./styles/components/buttons.css" />
+    <link rel="stylesheet" href="./styles/base/global-reset.css" />
+    <link rel="stylesheet" href="./styles/pages/sightseeings.css" />
+    <link rel="stylesheet" href="./styles/components/burgermenu.css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" />
+    <!-- Scripts Link -->
+    <script src="./scripts/animations/gsap-scrolltrigger.js" defer></script>
+    <script src="./scripts/components/burgermenu.js" defer></script>
+    <script src="./scripts/filters/sightseeing-filter.js" defer></script>
+    <script src="./scripts/components/scroll-top-button.js" defer></script>
+    <script src="./scripts/filters/faq-search.js" defer></script>
+    <!-- Scripts GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Skip Links to Main & Footer content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer-content" class="skip-link">Skip to footer content</a>
+    <!-- Header-Section -->
+    <!-- Hero - Navbar -->
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo-wrap">
+          <a
+            href="./index.html"
+            class="logo-link"
+            aria-label="Go to VoyageVibes Home"
+          >
+            <div class="logo-svg">
+              <svg
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="0 0 512 512"
+                aria-labelledby="logo-title"
+                role="img"
+              >
+                <title id="logo-title">VoyageVibes Logo</title>
+                <defs>
+                  <style>
+                    .st0 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <path
+                  id="Line_2"
+                  d="M256,280.9c-4.4,0-8,4.2-8,9.3v37.3c0,5.2,3.6,9.3,8,9.3s8-4.2,8-9.3v-37.3c0-5.2-3.6-9.3-8-9.3Z"
+                />
+                <path
+                  id="Line_1"
+                  d="M297.2,328.9c0-4.4-3.7-8-8.2-8h-32.8c-4.5,0-8.2,3.6-8.2,8s3.7,8,8.2,8h32.8c4.5,0,8.2-3.6,8.2-8Z"
+                />
+                <path
+                  id="Cloud_3"
+                  d="M486.7,101c-4.1-16-17.7-27.8-34.1-29.7-10.9-31.3-45.1-47.8-76.4-36.9-11.3,3.9-21.2,11.2-28.4,20.8-1.3-.1-2.6-.2-3.9-.2-26.5,0-48,21.5-48,48,0,26.5,21.5,48,48,48h104c22.1,0,40-17.9,40-40.1,0-3.4-.4-6.7-1.3-9.9ZM448,135h-104c-17.7,0-32-14.3-32-32,0-17.7,14.3-32,32-32,2.1,0,4.1.2,6.2.6,3.3.6,6.6-.8,8.4-3.7,12.7-20.7,39.8-27.2,60.5-14.4,10,6.1,17.1,16,19.8,27.3.9,3.7,4.3,6.3,8.1,6.2.3,0,.7,0,1,0,10.9,0,20.5,7.4,23.2,18,.5,2,.8,4,.8,6,0,13.2-10.8,24-24,24Z"
+                />
+                <path
+                  id="Cloud_2"
+                  d="M144.1,428.7c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM117.6,452H46.2c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <path
+                  id="Cloud_1"
+                  d="M495.2,335.8c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM468.6,359.1h-71.4c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <g id="Clock">
+                  <path
+                    d="M256,248c-39.8,0-72,32.2-72,72s32.2,72,72,72,72-32.2,72-72c0-39.7-32.3-72-72-72ZM256,376c-30.9,0-56-25.1-56-56s25.1-56,56-56,56,25.1,56,56c0,30.9-25.1,56-56,56Z"
+                  />
+                  <path
+                    d="M256,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M224,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M288,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <g>
+                    <rect class="st0" x="184" y="208" width="144" height="16" />
+                    <rect class="st0" x="240" y="128" width="32" height="16" />
+                    <polygon
+                      class="st0"
+                      points="275.2 160 236.8 160 210.1 192 301.9 192 275.2 160"
+                    />
+                    <polygon
+                      class="st0"
+                      points="256.8 48 255.2 48 248.8 112 263.2 112 256.8 48"
+                    />
+                    <rect class="st0" x="192" y="416" width="128" height="8" />
+                    <rect
+                      class="st0"
+                      x="176"
+                      y="240"
+                      width="160"
+                      height="160"
+                    />
+                    <path
+                      d="M344,224v-40c0-4.4-3.6-8-8-8s-8,3.6-8,8v8h-5.2l-34.8-41.7v-30.3c0-4.4-3.6-8-8-8h-.8l-7.3-72.8c-.4-4.1-3.9-7.2-8-7.2v-16c0-4.4-3.6-8-8-8s-8,3.6-8,8v16c-4.1,0-7.5,3.1-8,7.2l-7.3,72.8h-.8c-4.4,0-8,3.6-8,8v30.3l-34.8,41.7h-5.2v-8c0-4.4-3.6-8-8-8s-8,3.6-8,8v40c-4.4,0-8,3.6-8,8v176c0,4.4,3.6,8,8,8h8v80c0,4.4,3.6,8,8,8s8-3.6,8-8v-56h128v56c0,4.4,3.6,8,8,8s8-3.6,8-8v-80h8c4.4,0,8-3.6,8-8v-176c0-4.4-3.6-8-8-8ZM255.2,48h1.5l6.4,64h-14.3l6.4-64ZM240,128h32v16h-32v-16ZM236.8,160h38.5l26.7,32h-91.8l26.7-32ZM184,208h144v16h-144v-16ZM320,424h-128v-8h128v8ZM336,400h-160v-160h160v160Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="logo">Voyage<span>Vibes </span></div>
+          </a>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="menu-wrap">
+          <input
+            type="checkbox"
+            id="menu-toggler"
+            class="toggler"
+            aria-controls="menu"
+          />
+          <label
+            for="menu-toggler"
+            class="hamburger"
+            aria-label="Toggle navigation menu"
+          >
+            <div></div>
+          </label>
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./history.html">History</a></li>
+              <li><a href="./sightseeings.html">Sightseeings</a></li>
+              <li><a href="./events.html">Events</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Regular Navigation -->
+        <ul class="desktop-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./history.html">History</a></li>
+          <li><a href="./sightseeings.html">Sightseeings</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="overlay">
+        <div class="hero-content">
+          <h1 class="hero-heading">London's Iconic Sights</h1>
+          <p class="hero-text">
+            “Take a journey through London’s most famous landmarks, from
+            historic monuments to modern marvels. Explore the city’s iconic
+            sights and uncover what makes London a must-visit destination.”
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main-Section -->
+    <main id="main-content">
+      <!-- Filter-Section -->
+      <section class="filter-section">
+        <div class="filter-container">
+          <div class="filter-menu">
+            <ul>
+              <li data-filter="default" class="active">
+                <a href="#">Top Picks</a>
+              </li>
+              <li data-filter="landmarks">
+                <a href="#">Must-See Landmarks</a>
+              </li>
+              <li data-filter="experiences">
+                <a href="#">Activities & Adventures</a>
+              </li>
+              <li data-filter="explore">
+                <a href="#">Discover the City</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heading & paragraph container -->
+      <section class="sightseeing-intro">
+        <h2 class="sightseeing-heading"></h2>
+        <p class="sightseeing-paragraph"></p>
+      </section>
+
+      <!-- Sightseeing Content -->
+      <div class="sightseeing-content">
+        <!-- Default Cards -->
+        <div class="sightseeing-group" data-category="default">
+          <div class="card fade-in">
+            <img
+              src="./images/sightseeing-section/buckingham-palace.jpg"
+              alt="Buckingham Palace facade in London"
+            />
+            <div class="card-text">
+              <h3>Buckingham Palace</h3>
+              <p>
+                Buckingham Palace is the monarchy's grand official residence in
+                London.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in">
+            <img
+              src="./images/sightseeing-section/big-ben.jpg"
+              alt="Big Ben and Westminster Bridge in London"
+            />
+            <div class="card-text">
+              <h3>Big Ben</h3>
+              <p>
+                Big Ben stands tall, symbolizing heritage and London's timeless
+                charm.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in">
+            <img
+              src="./images/sightseeing-section/london-eye.jpg"
+              alt="Big Ben and Westminster Bridge in London"
+            />
+            <div class="card-text">
+              <h3>London Eye</h3>
+              <p>
+                London Eye grants panoramic vistas, mesmerizing cityscapes,
+                unforgettable sightseeing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Landmarks -->
+        <div class="sightseeing-group" data-category="landmarks">
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/tower-of-london.jpg"
+              alt="Tower of London exterior"
+            />
+            <div class="card-text">
+              <h3>Tower of London</h3>
+              <p>
+                Tower of London: iconic fortress safeguarding Britain’s famed
+                crown jewels.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/stpaul-cathedral.jpg"
+              alt="St. Paul's Cathedral in London"
+            />
+            <div class="card-text">
+              <h3>St. Paul's Cathedral</h3>
+              <p>
+                St Paul’s Cathedral stands, symbolizing London’s history, faith,
+                and resilience.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/tower-bridge.jpg"
+              alt="Tower Bridge spanning the Thames"
+            />
+            <div class="card-text">
+              <h3>Tower Bridge</h3>
+              <p>
+                Tower Bridge spans the Thames, showcasing Victorian engineering
+                and grandeur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experiences -->
+        <div class="sightseeing-group" data-category="experiences">
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/river-cruise.jpg"
+              alt="Boat cruise on the River Thames"
+            />
+            <div class="card-text">
+              <h3>Thames River Cruise</h3>
+              <p>
+                Thames River Cruise offers scenic vistas, showcasing London’s
+                iconic landmarks.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/west-theatre.jpg"
+              alt="West End Theatre district in London"
+            />
+            <div class="card-text">
+              <h3>West End Theatre</h3>
+              <p>
+                West End Theatre dazzles with performances, enthralling London’s
+                cultural heart.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/borough-market.jpg"
+              alt="Borough Market stalls"
+            />
+            <div class="card-text">
+              <h3>Borough Market Food Tour</h3>
+              <p>
+                Borough Market: London's bustling hub of vibrant, diverse
+                culinary delights.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="sightseeing-group" data-category="explore">
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/hyde-park.jpg"
+              alt="Hyde Park pathway with greenery"
+            />
+            <div class="card-text">
+              <h3>Hyde Park Walk</h3>
+              <p>
+                Hyde Park Walk offers tranquil greenery, rejuvenating London's
+                bustling spirit.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/street-art-tour.jpg"
+              alt="Street art murals in Shoreditch"
+            />
+            <div class="card-text">
+              <h3>Street Art Tour in Shoreditch</h3>
+              <p>
+                Street Art Tour in Shoreditch reveals vibrant murals,
+                celebrating creativity.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./images/sightseeing-section/camden-market.jpg"
+              alt="Camden Market stalls and crowd"
+            />
+            <div class="card-text">
+              <h3>Camden Market</h3>
+              <p>
+                Camden Market overflows with alternative fashion, global
+                flavors, lively subculture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <section class="faq fade-in">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-search">
+          <label for="faq-search" class="visually-hidden">Search FAQs</label>
+          <input type="text" id="faq-search" placeholder="Search FAQs..." />
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">
+            <span class="faq-icon">+</span> How do I get tickets for the Tower
+            of London?
+          </h3>
+          <p class="faq-answer">
+            You can purchase tickets online or at the entrance. It's recommended
+            to buy tickets in advance to avoid long lines.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">
+            <span class="faq-icon">+</span> What are the opening hours for the
+            London Eye?
+          </h3>
+          <p class="faq-answer">
+            The London Eye is open daily from 10:00 AM to 8:30 PM, but opening
+            hours may vary during holidays.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">
+            <span class="faq-icon">+</span> Can I take photos at Buckingham
+            Palace?
+          </h3>
+          <p class="faq-answer">
+            Yes, photography is allowed at Buckingham Palace's exterior.
+            However, photography is not allowed inside the palace.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">
+            <span class="faq-icon">+</span> Is there a way to skip the lines at
+            the British Museum?
+          </h3>
+          <p class="faq-answer">
+            You can buy skip-the-line tickets or join a guided tour to avoid
+            long wait times at the British Museum.
+          </p>
+        </div>
+
+        <div class="faq-footer">
+          <span><p>If you need more help,</p></span
+          ><a href="./contact.html" class="btn btn-primary">Contact us</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-Section -->
+    <footer class="footer" id="footer-content">
+      <div class="container-fw">
+        <div class="col">
+          <h2 class="footer-logo">Voyage<span>Vibes</span></h2>
+          <p>
+            VoyageVibes brings expert travel tips to help you explore the
+            world’s best spots. Start your adventure now!
+          </p>
+        </div>
+        <div class="col">
+          <h3>Contact</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> 26985 Brighton Lane, Lake
+            Forest, CA 92630
+          </p>
+          <h4><i class="fa-solid fa-phone"></i> +1 (949) 354-2574</h4>
+          <p><i class="fa-regular fa-envelope"></i> support@voyagevibes.com</p>
+        </div>
+        <div class="col">
+          <ul>
+            <h3>Quick Links</h3>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./sightseeings.html">Sightseeing</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Newsletter</h3>
+          <form>
+            <i class="fa-regular fa-envelope"></i>
+            <label for="newsletter-email" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              placeholder="Enter your email here"
+              required
+            />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="footer-socials">
+            <a href="http://facebook.com" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="http://instagram.com" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="http://twitter.com" aria-label="Twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="http://youtube.com" aria-label="Youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>Copyright © 2025 VoyageVibes. All rights reserved.</p>
+        </div>
+        <div class="privacy">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Services</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer-Section End -->
+    <!-- Scroll-Button -->
+    <button id="scroll_button" class="scroll-button" aria-label="Scroll to top">
+      &uarr;
+    </button>
+  </body>
+</html>

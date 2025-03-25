@@ -1,0 +1,183 @@
+/* Carousel CSS */
+.carousel__track-container {
+  z-index: -1;
+  margin-top: 50px;
+}
+.carousel {
+  position: relative;
+  height: 600px;
+  margin: 50px auto;
+  max-width: 90%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__track-container {
+  background: transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in-out;
+}
+
+/* Carousel Slides */
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.carousel__slide.current-slide {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* New button */
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.carousel__button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1);
+}
+
+.carousel__button img {
+  width: 15px;
+  filter: invert(1);
+}
+
+.carousel__button--left {
+  left: 0px;
+}
+
+.carousel__button--right {
+  right: 0px;
+}
+
+/* Carousel Thumbnails */
+.carousel__nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+  left: 50%;
+  width: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateX(-50%);
+  padding: 15px;
+  gap: 1.3rem;
+  border-radius: 5px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.carousel__indicator {
+  width: 110px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.carousel__indicator img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+.carousel__indicator.current-slide img {
+  transform: scale(1.2);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.carousel__indicator.current-slide {
+  border: 3px solid white;
+  transform: scale(1.2);
+  border-radius: 5px;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  to {
+    transform: scale(1.4);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+  }
+}
+/* Thumbnails Adjustments End */
+/* Play & Pause Button */
+.carousel__button--toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel__button--toggle img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+.carousel__button--toggle:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+span {
+  color: #fff;
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking - VoyageVibes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/logos/fovivon.png"
+      type="image/x-icon"
+    />
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="./styles/components/skiplink.css" />
+    <link rel="stylesheet" href="./styles/components/svg.css" />
+    <link rel="stylesheet" href="./styles/components/scroll-top-button.css" />
+    <link rel="stylesheet" href="./styles/components/hero-nav.css" />
+    <link rel="stylesheet" href="./styles/components/buttons.css" />
+    <link rel="stylesheet" href="./styles/base/global-reset.css" />
+    <link rel="stylesheet" href="./styles/pages/booking.css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" />
+    <link rel="stylesheet" href="./styles/components/burgermenu.css" />
+    <!-- Scripts -->
+    <script src="./scripts/animations/gsap-scrolltrigger.js" defer></script>
+    <script src="./scripts/components/burgermenu.js" defer></script>
+    <script src="./scripts/components/scroll-top-button.js" defer></script>
+    <!-- Scripts GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <!-- Skip Links to Main & Footer content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer-content" class="skip-link">Skip to footer content</a>
+    <!-- Header-Section -->
+    <!-- Hero - Navbar -->
+    <header class="hero">
+      <nav class="navbar">
+        <div class="logo-wrap">
+          <a
+            href="./index.html"
+            class="logo-link"
+            aria-label="Go to VoyageVibes Home"
+          >
+            <div class="logo-svg">
+              <svg
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="0 0 512 512"
+                aria-labelledby="logo-title"
+                role="img"
+              >
+                <title id="logo-title">VoyageVibes Logo</title>
+                <defs>
+                  <style>
+                    .st0 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <path
+                  id="Line_2"
+                  d="M256,280.9c-4.4,0-8,4.2-8,9.3v37.3c0,5.2,3.6,9.3,8,9.3s8-4.2,8-9.3v-37.3c0-5.2-3.6-9.3-8-9.3Z"
+                />
+                <path
+                  id="Line_1"
+                  d="M297.2,328.9c0-4.4-3.7-8-8.2-8h-32.8c-4.5,0-8.2,3.6-8.2,8s3.7,8,8.2,8h32.8c4.5,0,8.2-3.6,8.2-8Z"
+                />
+                <path
+                  id="Cloud_3"
+                  d="M486.7,101c-4.1-16-17.7-27.8-34.1-29.7-10.9-31.3-45.1-47.8-76.4-36.9-11.3,3.9-21.2,11.2-28.4,20.8-1.3-.1-2.6-.2-3.9-.2-26.5,0-48,21.5-48,48,0,26.5,21.5,48,48,48h104c22.1,0,40-17.9,40-40.1,0-3.4-.4-6.7-1.3-9.9ZM448,135h-104c-17.7,0-32-14.3-32-32,0-17.7,14.3-32,32-32,2.1,0,4.1.2,6.2.6,3.3.6,6.6-.8,8.4-3.7,12.7-20.7,39.8-27.2,60.5-14.4,10,6.1,17.1,16,19.8,27.3.9,3.7,4.3,6.3,8.1,6.2.3,0,.7,0,1,0,10.9,0,20.5,7.4,23.2,18,.5,2,.8,4,.8,6,0,13.2-10.8,24-24,24Z"
+                />
+                <path
+                  id="Cloud_2"
+                  d="M144.1,428.7c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM117.6,452H46.2c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <path
+                  id="Cloud_1"
+                  d="M495.2,335.8c-2.8-11-12.1-19.1-23.4-20.4-7.5-21.5-31-32.8-52.4-25.3-7.8,2.7-14.6,7.7-19.5,14.3-.9,0-1.8-.1-2.7-.1-18.2,0-32.9,14.8-32.9,32.9,0,18.2,14.7,32.9,32.9,32.9h71.4c15.2,0,27.5-12.3,27.4-27.5,0-2.3-.3-4.6-.9-6.8ZM468.6,359.1h-71.4c-12.1,0-22-9.8-22-22,0-12.1,9.8-22,22-22,1.4,0,2.8.1,4.2.4,2.2.4,4.5-.6,5.7-2.5,8.7-14.2,27.3-18.6,41.5-9.9,6.8,4.2,11.7,11,13.6,18.8.6,2.6,3,4.3,5.6,4.2.2,0,.5,0,.7,0,7.5,0,14.1,5.1,15.9,12.3.3,1.3.5,2.7.5,4.1,0,9.1-7.4,16.5-16.5,16.5Z"
+                />
+                <g id="Clock">
+                  <path
+                    d="M256,248c-39.8,0-72,32.2-72,72s32.2,72,72,72,72-32.2,72-72c0-39.7-32.3-72-72-72ZM256,376c-30.9,0-56-25.1-56-56s25.1-56,56-56,56,25.1,56,56c0,30.9-25.1,56-56,56Z"
+                  />
+                  <path
+                    d="M256,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M224,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <path
+                    d="M288,456c-4.4,0-8,3.6-8,8v32c0,4.4,3.6,8,8,8s8-3.6,8-8v-32c0-4.4-3.6-8-8-8Z"
+                  />
+                  <g>
+                    <rect class="st0" x="184" y="208" width="144" height="16" />
+                    <rect class="st0" x="240" y="128" width="32" height="16" />
+                    <polygon
+                      class="st0"
+                      points="275.2 160 236.8 160 210.1 192 301.9 192 275.2 160"
+                    />
+                    <polygon
+                      class="st0"
+                      points="256.8 48 255.2 48 248.8 112 263.2 112 256.8 48"
+                    />
+                    <rect class="st0" x="192" y="416" width="128" height="8" />
+                    <rect
+                      class="st0"
+                      x="176"
+                      y="240"
+                      width="160"
+                      height="160"
+                    />
+                    <path
+                      d="M344,224v-40c0-4.4-3.6-8-8-8s-8,3.6-8,8v8h-5.2l-34.8-41.7v-30.3c0-4.4-3.6-8-8-8h-.8l-7.3-72.8c-.4-4.1-3.9-7.2-8-7.2v-16c0-4.4-3.6-8-8-8s-8,3.6-8,8v16c-4.1,0-7.5,3.1-8,7.2l-7.3,72.8h-.8c-4.4,0-8,3.6-8,8v30.3l-34.8,41.7h-5.2v-8c0-4.4-3.6-8-8-8s-8,3.6-8,8v40c-4.4,0-8,3.6-8,8v176c0,4.4,3.6,8,8,8h8v80c0,4.4,3.6,8,8,8s8-3.6,8-8v-56h128v56c0,4.4,3.6,8,8,8s8-3.6,8-8v-80h8c4.4,0,8-3.6,8-8v-176c0-4.4-3.6-8-8-8ZM255.2,48h1.5l6.4,64h-14.3l6.4-64ZM240,128h32v16h-32v-16ZM236.8,160h38.5l26.7,32h-91.8l26.7-32ZM184,208h144v16h-144v-16ZM320,424h-128v-8h128v8ZM336,400h-160v-160h160v160Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="logo">Voyage<span>Vibes </span></div>
+          </a>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="menu-wrap">
+          <input
+            type="checkbox"
+            id="menu-toggler"
+            class="toggler"
+            aria-controls="menu"
+          />
+          <label
+            for="menu-toggler"
+            class="hamburger"
+            aria-label="Toggle navigation menu"
+          >
+            <div></div>
+          </label>
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./history.html">History</a></li>
+              <li><a href="./sightseeings.html">Sightseeings</a></li>
+              <li><a href="./events.html">Events</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Regular Navigation -->
+        <ul class="desktop-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./history.html">History</a></li>
+          <li><a href="./sightseeings.html">Sightseeings</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="overlay">
+        <div class="hero-content">
+          <h1 class="hero-heading">Get in Touch about London</h1>
+          <p class="hero-text">
+            “VoyageVibes is your go-to resource for exploring London’s top
+            attractions and lesser-known corners. Whether it’s your first trip
+            or you’re a seasoned traveler, we offer insider tips to help you
+            make the most of your visit. Have questions? Reach out anytime!”
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Main - Section -->
+    <main class="booking-page fade-in" id="main-content">
+      <section class="cards-container">
+        <h3>Book Your London Experience</h3>
+        <p>
+          Choose from curated tours, day trips, and personalized packages.
+          Whether you’re drawn to top attractions or local favorites, our
+          streamlined booking process makes planning your trip a breeze.
+        </p>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <img
+              src="./images/booking/booking-card1.jpg"
+              alt="Booking package 1 Image"
+            />
+            <h3>Classic London Highlights</h3>
+            <p>
+              Explore Big Ben, the Tower of London, and more on a guided tour.
+            </p>
+            <a href="./booking.html" class="btn btn-secondary">Book Now</a>
+          </article>
+          <article class="experience-card">
+            <img
+              src="./images/booking/booking-card2.jpg"
+              alt="Booking package 2 Image"
+            />
+            <h3>Hidden Neighborhoods Tour</h3>
+            <p>
+              Discover lesser-known corners of the city and local favorite
+              spots.
+            </p>
+            <a href="./booking.html" class="btn btn-secondary">Book Now</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Booking Section -->
+      <section class="booking-container">
+        <!-- Booking Form -->
+        <div class="booking-form">
+          <h3>Secure Your Spot</h3>
+          <p>Fill in your details to confirm your booking.</p>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Confirm Booking
+            </button>
+          </form>
+        </div>
+
+        <!-- Why Book - Section -->
+        <div class="why-book">
+          <h3>Why Book with VoyageVibes?</h3>
+          <ul>
+            <li>
+              <strong>Local Experts:</strong> We know London inside and out.
+            </li>
+            <li>
+              <strong>Flexible Cancellation:</strong> Change your plans with
+              ease.
+            </li>
+            <li>
+              <strong>24/7 Support:</strong> Get help whenever you need it.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-Section -->
+    <footer class="footer" id="footer-content">
+      <div class="container-fw">
+        <div class="col">
+          <h2 class="footer-logo">Voyage<span>Vibes</span></h2>
+          <p>
+            VoyageVibes brings expert travel tips to help you explore the
+            world’s best spots. Start your adventure now!
+          </p>
+        </div>
+        <div class="col">
+          <h3>Contact</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> 26985 Brighton Lane, Lake
+            Forest, CA 92630
+          </p>
+          <h4><i class="fa-solid fa-phone"></i> +1 (949) 354-2574</h4>
+          <p><i class="fa-regular fa-envelope"></i> support@voyagevibes.com</p>
+        </div>
+        <div class="col">
+          <ul>
+            <h3>Quick Links</h3>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./sightseeings.html">Sightseeing</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Newsletter</h3>
+          <form>
+            <i class="fa-regular fa-envelope"></i>
+            <label for="newsletter-email" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              placeholder="Enter your email here"
+              required
+            />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="footer-socials">
+            <a href="http://facebook.com" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="http://instagram.com" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="http://twitter.com" aria-label="Twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="http://youtube.com" aria-label="Youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>Copyright © 2025 VoyageVibes. All rights reserved.</p>
+        </div>
+        <div class="privacy">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Services</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer-Section End -->
+    <!-- Scroll-Button -->
+    <button id="scroll_button" class="scroll-button" aria-label="Scroll to top">
+      &uarr;
+    </button>
+  </body>
+</html>
